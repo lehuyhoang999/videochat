@@ -153,6 +153,8 @@ async function configDesc(desc) {
                 });
             }
         });
+        database.ref('Video/desc/'+name).onDisconnect().remove();
+
         database.ref('Video/candidate').on('value', (snapshot)=> {
             console.log(snapshot);
             console.log(snapshot.key);
@@ -164,7 +166,10 @@ async function configDesc(desc) {
                         }
                 });
         });
-
+        database.ref('Video/candidate').onDisconnect().remove();
+        
+        database.ref('Video/'+ name).set({name:name});
+        database.ref('Video/'+ name).onDisconnect().remove();
     }
 
     alert('Đăng ký thành công!')
