@@ -138,6 +138,7 @@ async function configDesc(desc) {
         console.error(err);
     }
   }
+
   function login() {
     if (name.length>0){
         database.ref('Video/desc/'+name).on('value', (snapshot)=> {
@@ -165,5 +166,7 @@ async function configDesc(desc) {
         });
 
     }
+
+    alert('Đăng ký thành công!')
   }
 
