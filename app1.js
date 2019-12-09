@@ -38,7 +38,7 @@ pc.ontrack = (event) => {
 };
 
 // call start() to initiate
-const config = {audio: false, video: true};
+const config = {audio: true, video: true};
 const localView = document.getElementById('localStream');
 function start() {
     try {
