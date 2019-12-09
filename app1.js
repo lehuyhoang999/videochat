@@ -44,7 +44,7 @@ const config = {audio: {
   // channelCount: 2,
   echoCancellation: true,
   // latency: 0,
-  noiseSuppression: true,
+  // noiseSuppression: true,
   // sampleRate: 48000,
   // sampleSize: 16,
   volume: 0.9
