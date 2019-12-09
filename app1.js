@@ -39,7 +39,16 @@ pc.ontrack = (event) => {
 
 // call start() to initiate
 // const config = {audio: true, video: true};
-const config = {audio: { echoCancellation: true }, video: true};
+const config = {audio: { 
+  autoGainControl: true,
+  channelCount: 2,
+  echoCancellation: true,
+  latency: 0,
+  noiseSuppression: true,
+  sampleRate: 48000,
+  sampleSize: 16,
+  volume: 0.9
+ }, video: true};
 const localView = document.getElementById('localStream');
 function start() {
     try {
