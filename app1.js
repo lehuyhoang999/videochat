@@ -40,9 +40,9 @@ pc.ontrack = (event) => {
 // call start() to initiate
 // const config = {audio: true, video: true};
 const config = {audio: { 
-  autoGainControl: false,
+  autoGainControl: true,
   channelCount: 2,
-  echoCancellation: false,
+  echoCancellation: true,
   latency: 0,
   noiseSuppression: true,
   sampleRate: 48000,
