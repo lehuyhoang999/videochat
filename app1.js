@@ -42,7 +42,7 @@ pc.ontrack = (event) => {
 const config = {audio: { 
   // autoGainControl: true,
   // channelCount: 2,
-  echoCancellation: true,
+  echoCancellation: false,
   // latency: 0,
   // noiseSuppression: true,
   // sampleRate: 48000,
