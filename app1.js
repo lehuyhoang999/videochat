@@ -41,13 +41,13 @@ pc.ontrack = (event) => {
 // const config = {audio: true, video: true};
 const config = {audio: true, video: true};
 const localView = document.getElementById('localStream');
+localView.muted = true;
+localView.volume = 0;
 function start() {
     try {
         // get local stream, show it in self-view and add it to be sent
         navigator.mediaDevices.getUserMedia(config).then((stream)=>{
           stream.getTracks().forEach((track) => pc.addTrack(track, stream));
-          localView.muted = true;
-          localView.volume = 0;
           localView.srcObject = stream;
           localView.play();
         });
@@ -111,8 +111,6 @@ async function configDesc(desc) {
                 // start();
                 await navigator.mediaDevices.getUserMedia(config).then((stream)=>{
                   stream.getTracks().forEach((track) => pc.addTrack(track, stream));
-                  localView.muted = true;
-                  localView.volume = 0;
                   localView.srcObject = stream;
                   localView.play();
                 });
