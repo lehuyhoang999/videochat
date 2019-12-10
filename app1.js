@@ -42,7 +42,7 @@ pc.ontrack = (event) => {
 const config = {audio: { 
   // autoGainControl: true,
   channelCount: 2,
-  echoCancellation: false,
+  echoCancellation: true,
   // latency: 0,
   // noiseSuppression: true,
   // sampleRate: 48000,
@@ -55,6 +55,8 @@ function start() {
         // get local stream, show it in self-view and add it to be sent
         navigator.mediaDevices.getUserMedia(config).then((stream)=>{
           stream.getTracks().forEach((track) => pc.addTrack(track, stream));
+          localView.muted = true;
+          localView.volume = 0;
           localView.srcObject = stream;
           localView.play();
         });
@@ -118,6 +120,8 @@ async function configDesc(desc) {
                 // start();
                 await navigator.mediaDevices.getUserMedia(config).then((stream)=>{
                   stream.getTracks().forEach((track) => pc.addTrack(track, stream));
+                  localView.muted = true;
+                  localView.volume = 0;
                   localView.srcObject = stream;
                   localView.play();
                 });
