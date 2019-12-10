@@ -41,12 +41,12 @@ pc.ontrack = (event) => {
 // const config = {audio: true, video: true};
 const config = {audio: { 
   autoGainControl: false,
-  // channelCount: 2,
+  channelCount: 2,
   echoCancellation: false,
-  // latency: 0,
+  latency: 0,
   noiseSuppression: true,
-  // sampleRate: 48000,
-  // sampleSize: 16,
+  sampleRate: 48000,
+  sampleSize: 16,
   volume: 0.9
  }, video: true};
 const localView = document.getElementById('localStream');
